@@ -1,0 +1,19 @@
+<div>
+    <h2>新增文章add new article</h2>
+
+    <hr>
+    <%= form_for @article do |f| %>
+
+    标题title
+    <br>
+    <%= f.text_field :title %>
+    <br>
+    内容content
+    <br>
+    <%= f.kindeditor :content %>
+    <br>
+
+    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+    <% end %>
+
+</div>

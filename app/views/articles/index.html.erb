@@ -1,0 +1,22 @@
+<h1>Hello, kindeditor</h1>
+<br>
+<div>
+    <%= link_to("New article", new_article_path) %>
+  </div>
+<br><br>
+<table>
+    <thead>
+      <tr>
+        <td>Title</td>
+        <td>content</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= link_to(article.title, article_path(article)) %></td>
+          <td><%= raw article.content %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
